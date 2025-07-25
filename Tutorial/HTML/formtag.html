@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form tag</title>
+  </head>
+  <body>
+    <form>
+      Textbox:
+      <input type="text" required autocomplete="off" name="txt" /> Number:
+      <input type="number" min="0" max="100" name="num" /> Date:
+      <input type="date" name="date" /> Datetime:
+      <input type="datetime-local" name="datetime" /> Color:
+      <input type="color" name="color" /> Range:
+      <input type="range" name="range" />
+      <input type="hidden" readonly />
+      Radio: <input type="radio" name="Gender" value="0" />Male
+      <input type="radio" name="Gender" value="1" />Female Language:
+      <input type="checkbox" name="language" value="0" />Gujarati<input
+        type="checkbox"
+        name="language"
+        value="1"
+      />Hindi<input type="checkbox" name="language" value="2" />English City:
+      <select>
+        <option value="0">Surat</option>
+        <option value="1">Vadodara</option>
+        <option value="2">Ahmedabad</option>
+      </select>
+      Product:
+      <select>
+        <optiongroup name="Mobile">
+          <option value="0">Samsung</option>
+          <option value="1">Apple</option>
+        </optiongroup>
+        <optiongroup name="Laptop">
+          <option value="2">Dell</option>
+          <option value="3">HP</option>
+        </optiongroup>
+      </select>
+      <textarea name="txtarea" rows="5" cols="20"></textarea>
+      <input type="submit" value="Submit" />
+      <input type="reset" value="Reset" />
+      <input type="button" value="Click Me" onclick="alert('Button Clicked')" />
+      <input type="image" width="100" src="telephone.png" alt="Submit Image" />
+      File: <input type="file" name="file" /> Password:
+      <input type="password" name="password" />
+    </form>
+  </body>
+</html>

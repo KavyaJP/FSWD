@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Button</title>
+    <script>
+      function demo() {
+        alert("Welcome to JS");
+      }
+
+      function demo2() {
+        var a = confirm("Are you sure?");
+        if (a == true) {
+          alert("Record Delete");
+        }
+      }
+
+      function demo3() {
+        var a = prompt("Enter No1", 0);
+        var b = prompt("Enter No2", 0);
+        var c = parseInt(a) + parseInt(b);
+        document.write("Sum is = " + c);
+      }
+
+      function getdata() {
+        var a = document.getElementById("txt1").innerText;
+        console.log(a);
+      }
+
+      function setdata() {
+        document.getElementById("txt1").innerText = "changed";
+      }
+    </script>
+  </head>
+  <body>
+    <input type="button" onclick="demo()" value="ClickMe1" />
+    <input type="button" onclick="demo2()" value="ClickMe2" />
+    <input type="button" onclick="demo3()" value="ClickMe3" />
+    <input type="button" onclick="getdata()" value="Get" />
+    <input type="button" onclick="setdata()" value="Set" />
+    <p id="txt1">Hello, World!</p>
+  </body>
+</html>

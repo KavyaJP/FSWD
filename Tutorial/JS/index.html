@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../CSS/style.css" />
+    <script>
+      document.write("<h1>This is written via JS</h1>");
+      document.write("<p>This is a paragraph</p>");
+      document.write("Hi");
+      document.write('<table border="1">');
+      for (let i = 1; i <= 100; i++) {
+        if ((i - 1) % 10 === 0) document.write("<tr>");
+        document.write("<td>" + i + "</td>");
+        if (i % 10 === 0) document.write("</tr>");
+      }
+      document.write("</table>");
+      var a = [0, 1, 2, 3, 4];
+      a.forEach((element) => {
+        document.write(element + "<br>");
+      });
+      function sum(a, b) {
+        return a + b;
+      }
+      document.write("Sum is " + sum(10, 4) + "<br>");
+      const Hello = () => document.write("Hello World <br>");
+      Hello();
+      const sumInLine = (a, b) => {a + b};
+      var ans = sumInLine(10, 6);
+      document.write("Sum is " + sumInLine + "<br>");
+    </script>
+  </head>
+  <body>
+    <h1>This is written via HTML</h1>
+  </body>
+</html>

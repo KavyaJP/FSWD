@@ -1,0 +1,40 @@
+body {
+    background-color: black;
+    color: white;
+}
+
+h1 {
+    background-color: black;
+    color: blue;
+}
+
+h2 {
+    background-color: black;
+    color: yellow;
+}
+
+p {
+    background-color: black;
+    color: cyan;
+}
+
+div {
+    color: white;
+    border-radius: 2px;
+    background-color: rgb(17, 17, 122);
+    height: 30px;
+    width: 100px;
+    padding: 7px;
+    text-align: center;
+    font-size: 16px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 5px;
+    /* overflow-y: scroll; */
+}
+
+div:hover {
+    background-color: white;
+    color: black;
+}
