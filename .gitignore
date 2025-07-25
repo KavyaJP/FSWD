@@ -1,0 +1,58 @@
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+.pnpm-debug.log*
+
+# Build output
+dist/
+build/
+
+# dotenv environment variables
+.env
+.env.local
+.env.*.local
+
+# Logs
+logs
+*.log
+debug.log
+
+# OS-generated files
+.DS_Store
+Thumbs.db
+
+# Editor directories and files
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# React-specific
+*.cache
+.cache/
+.eslintcache
+
+# Coverage reports
+coverage/
+*.lcov
+
+# MongoDB data dumps (if any)
+dump/
+
+# Optional: if using Docker
+docker-compose.override.yml
+
+# Optional: if using Next.js or similar frameworks
+.next/
+
+# Optional: if using Firebase or similar tools
+.firebase/
+
+# Optional: if using testing tools
+jest.config.js
+test-results/
