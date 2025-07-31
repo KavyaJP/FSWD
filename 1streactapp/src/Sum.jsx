@@ -13,11 +13,6 @@ class Sum extends React.Component {
   doSum = () => {
     const { no1, no2 } = this.state;
 
-    if (no1.trim() === "" || no2.trim() === "") {
-      alert("Please enter both numbers.");
-      return;
-    }
-
     const sum = parseFloat(no1) + parseFloat(no2);
 
     if (isNaN(sum)) {
