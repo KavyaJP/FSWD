@@ -10,7 +10,7 @@ http.createServer((req, res) => {
         res.write('About Page')
         res.end()
     } else {
-        res.write('Welcome to Website')
+        res.write('<b>Welcome to Website, how are you</b>')
         res.end()
     }
 }).listen(4000)
