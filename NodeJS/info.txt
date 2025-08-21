@@ -1,0 +1,21 @@
+Third Party Modules :
+---------------------
+
+package.json ?
+It stores metadata of NodeJS Application. stores name and their version in NodeJS.
+
+How to Create Package.json ?
+    Method 1. Command
+        npm init
+    Method 2. Default Values
+        npm init -y
+    Method 3. Manually create
+
+Install a dependancy:
+    local: npm install <command-name>
+    global: npm install -g <command-name>
+
+    Uninstall: npm uninstall <command-name>
+
+Nodemon ?
+a third party modeule that restarts server when directory is changed
