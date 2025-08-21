@@ -12,7 +12,7 @@ class Sum extends React.Component {
 
   doSum = () => {
     const { no1, no2 } = this.state;
-
+    
     const sum = parseFloat(no1) + parseFloat(no2);
 
     if (isNaN(sum)) {
