@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact page</title>
+  </head>
+  <body>
+    <h1>Contact page</h1>
+    <br />
+    <!---
+    Methods
+    Get: * Default method 
+         * Not secure because data is visible
+         * used for sorting and searching
+    Post:* Secure 
+         * used for sensitive data
+    --->
+    <form action="/contactprocess">
+      No1: <input type="text" name="txt1" required /><br />
+      No2: <input type="text" name="txt2" required /><br />
+      <input type="submit" value="Submit" />
+    </form>
+    <a href="/home">Home page</a><br />
+    <a href="/about">about Page</a><br />
+    <a href="/Contact">Cotact page</a><br />
+  </body>
+</html>
