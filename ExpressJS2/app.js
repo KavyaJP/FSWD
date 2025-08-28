@@ -5,6 +5,11 @@ const port = 3000;
 // Middleware - this is a function that will be called automatically
 app.use(express.static("public"));
 
+// Template engine
+app.set("view engine", "ejs");
+app.set("views", __dirname + "/views");
+app.use(express.urlencoded());
+
 app.get("/", (req, res) => {
   res.sendFile(__dirname + "/home.html");
 });
@@ -19,6 +24,18 @@ app.get("/about", (req, res) => {
 
 app.get("/contact", (req, res) => {
   res.sendFile(__dirname + "/contact.html");
+});
+
+app.get("/sum", (req, res) => {
+  res.render("sum");
+});
+
+app.post("/sumprocess", (req, res) => {
+  console.log(req.body);
+  var a = req.body.txt1;
+  var b = req.body.txt2;
+  var c = parseInt(a) + parseInt(b);
+  res.render("ans", { mya: a, myb: b, myc: c });
 });
 
 app.get("/contactprocess", (req, res) => {
