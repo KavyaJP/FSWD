@@ -2,6 +2,9 @@ const express = require('express')
 const app = express()
 const port = 3000
 
+// Middleware - this is a function that will be called automatically
+app.use(express.static('public'))
+
 app.get('/', (req, res) => {
   res.send('Hello World!')
 })
@@ -21,3 +24,5 @@ app.get('/contact', (req, res) => {
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 })
+
+console.log('The app started on http://localhost:3000')
