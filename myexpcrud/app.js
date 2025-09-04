@@ -44,4 +44,6 @@ app.use(function (err, req, res, next) {
   res.render("error");
 });
 
+console.log("Server started on http://127.0.0.1:3000");
+
 module.exports = app;
