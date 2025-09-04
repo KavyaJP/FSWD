@@ -35,4 +35,24 @@ router.post("/add-product-process", function (req, res, next) {
     });
 });
 
+router.get("/display-product", async function (req, res, next) {
+  try {
+    const data = await ProductModel.find();
+    res.render("display-product", { mydata: data });
+  } catch (err) {
+    console.log(`Error Occured ${err}`);
+    next(err);
+  }
+});
+
+router.get("/display-product-api", async function (req, res, next) {
+  try {
+    const mydata = await ProductModel.find();
+    res.json(mydata);
+  } catch (err) {
+    console.log(`Error Occured ${err}`);
+    res.status(500).json({ error: "Failed to retrieve data" });
+  }
+});
+
 module.exports = router;
