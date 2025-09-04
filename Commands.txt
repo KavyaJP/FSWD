@@ -1,1 +1,29 @@
 Create a React Project: npm create vite@latest
+
+
+
+
+Express API with crud and :
+
+1 - create new project using express generator
+	npx express-generator --view=ejs myexpcrud
+2 - navigate to project
+	cd myexpcrud
+3 - dependancies
+	npm install
+4 - open project in vscode
+	code .
+5 - run command
+	nodemon
+6 - open project on browser
+	http://127.0.0.1:3000
+
+----------------------------------------
+
+7 - download package manager
+	npm i mongoose
+8 - Load Package in app.js
+	const mongoose = require('mongoose');
+9 - Establish connection to MongoDB
+	mongoose.connect('mongodb://127.0.0.1:27017/test');
+
