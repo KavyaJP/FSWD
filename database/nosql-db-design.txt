@@ -1,0 +1,22 @@
++SubjectMaster
+--------------
+SubjectID
+SubjectName
+
++StudentMaster
+--------------
+StudentID
+StudentName
+
++StudentSubjectAllocation
+-------------------------
+SubjAllID
+SubjectID
+StudentID
+
+instead of all of this we can use this in mongoDB
+-------------------------------------------------
+
+StudentID
+StudentName
+StudentSubject : ['C', 'C++', 'Java']

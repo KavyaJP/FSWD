@@ -1,0 +1,22 @@
+mongosh - start the server
+
+port: 27017
+
+--- commands ---
+
+show dbs        : shows all the database list
+db              : current database
+use <db-name>   : use the database name specified
+cls             : clear te screen
+
+--- collection related commands ---
+
+db.createCollection("Student")  : creates a collection
+show collections                : lists all collections
+db.collection-name.drop()       : drops a collection
+
+if Student is our collection name
+db.Student.insertOne({'name':'Kavya','Gender':'Male'})                                              : Insert one entry
+db.Student.insertMany([{'name':'Vansh','Gender':'Male'}, {'name':'Aarya','Mobile':'1234567890'}])   : Insert multiple enteries
+db.Student.find()                                                                                   : Show the table values
+db.Student.find({'name':'Kavya'})                                                                   : Find the value where name is Kavya

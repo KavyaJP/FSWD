@@ -1,0 +1,45 @@
+admin
+    AdminID
+    AdminName
+    AdminEmail
+    AdminPassword
+user
+    UserID
+    Name
+    Gender
+    Email
+    Password
+    Mobile
+category
+    CategoryID
+    CategoryName
+product
+    ProductID
+    ProductName
+    ProductPrice
+    ProductImage
+    ProductDetails
+    CategoryID
+cart
+    CartID
+    ProductID
+    UserID
+    Qauntity
+order
+    OrderID
+    OrderDate
+    UserID
+    OrderStatus
+    ShippingName
+    ShippingMobile
+    ShippingAddress
+orderDetails
+    OrderDetailsID
+    OrderID
+    ProductID
+    Qauntity
+    TotalPrice
+payment
+    PaymentID
+    PaymentStatus
+    
