@@ -15,28 +15,12 @@ Together, these technologies let you build **end-to-end web applications** using
 
 ---
 
-## 📅 My Progress
-
-| Date       | Topic / Milestone                        | Notes / Projects |
-|------------|------------------------------------------|------------------|
-| YYYY-MM-DD | Started learning MongoDB                 |                  |
-| YYYY-MM-DD | Built my first Express API               |                  |
-| YYYY-MM-DD | Created my first React component         |                  |
-| YYYY-MM-DD | Connected React with Node backend        |                  |
-| YYYY-MM-DD | Built a full CRUD app using MERN         | [Link]()         |
-
-_→ I will keep updating this table as I make progress._
-
----
-
 ## 📚 Resources I’m Using
 
 - [MongoDB University](https://university.mongodb.com/)
 - [Express Documentation](https://expressjs.com/)
 - [React Docs](https://reactjs.org/)
 - [Node.js Docs](https://nodejs.org/)
-- [freeCodeCamp - MERN Tutorials](https://www.freecodecamp.org/)
-- YouTube Channels: Codevolution, Traversy Media, Web Dev Simplified
 
 ---
 
@@ -53,11 +37,11 @@ _→ I will keep updating this table as I make progress._
 
 ## 💡 Mini Project Ideas
 
-- ✅ Todo App
-- ✅ Notes App
-- ☐ Blog with Comments
-- ☐ Authentication System (JWT or OAuth)
-- ☐ Chat App with Socket.io
+- [] Todo App
+- [] Notes App
+- [] Blog with Comments
+- [] Authentication System (JWT or OAuth)
+- [] Chat App with Socket.io
 
 ---
 
