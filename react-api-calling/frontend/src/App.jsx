@@ -1,41 +1,33 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import axios from 'axios';
+import './App.css'; // Import the CSS file
 
 function App() {
-  var mydata = [
-    { "name": "Kavya", "Gender": "Male", "Image": "https://randomuser.me/api/portraits/men/64.jpg" },
-    { "name": "Vansh", "Gender": "Male", "Image": "https://randomuser.me/api/portraits/men/63.jpg" },
-    { "name": "Aarya", "Gender": "Male", "Image": "https://randomuser.me/api/portraits/men/62.jpg" },
-    { "name": "Priya", "Gender": "Female", "Image": "https://randomuser.me/api/portraits/women/61.jpg" }
-  ];
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    axios.get('https://fakestoreapi.com/products')
+      .then(res => {
+        setProducts(res.data);
+      }).catch((err) => {
+        console.error("Failed to fetch products:", err);
+      });
+  }, []);
 
   return (
-    <div style={{ padding: '20px' }}>
-      <h2>User Data</h2>
-      <table border={1} cellPadding="10" style={{ borderCollapse: 'collapse', width: '50%' }}>
-        <thead>
-          <tr>
-            <th>ID</th>
-            <th>Name</th>
-            <th>Gender</th>
-            <th>Image</th>
-          </tr>
-        </thead>
-        <tbody>
-          {mydata.map((value, index) => {
-            return (
-              <tr key={index}>
-                <td>{index + 1}</td>
-                <td>{value.name}</td>
-                <td>{value.Gender}</td>
-                <td>
-                  <img src={value.Image} alt={value.name} style={{ width: '50px', height: '50px', borderRadius: '50%' }} />
-                </td>
-              </tr>
-            );
-          })}
-        </tbody>
-      </table>
-    </div>
+    <>
+      <h2>Products List</h2>
+      <div className="main">
+        {products.map((product) => (
+          <div key={product.id} className="product">
+            <h3>{product.title}</h3>
+            <img src={product.image} alt={product.title} />
+            <p>${product.price}</p>
+            <input type="button" value="Details" className="btn" />
+          </div>
+        ))}
+      </div>
+    </>
   );
 }
 
