@@ -8,9 +8,10 @@
   <body>
     <h1>Add Product</h1>
     <form action="/add-product-process" method="post">
-      Name: <input type="text" name="txt1" /> <br />
-      Price: <input type="number" name="txt2" /> <br />
-      Details: <input type="text" name="txt3" /> <br />
+      Name: <input type="text" name="txt1" required /> <br />
+      Price: <input type="number" name="txt2" required /> <br />
+      Details: <input type="text" name="txt3" required /> <br />
+      Stock: <input type="number" name="txt4" required /> <br />
       <input type="submit" value="Submit" />
     </form>
   </body>

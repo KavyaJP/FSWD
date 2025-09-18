@@ -21,6 +21,7 @@ router.post("/add-product-process", function (req, res, next) {
     pname: req.body.txt1,
     pprice: req.body.txt2,
     pdetails: req.body.txt3,
+    pstock: req.body.txt4,
   };
 
   var myData = ProductModel(ProductData);
@@ -85,6 +86,7 @@ router.post("/update-product/:id", function (req, res, next) {
     pname: req.body.txt1,
     pprice: req.body.txt2,
     pdetails: req.body.txt3,
+    pstock: req.body.txt4,
   };
   ProductModel.findByIdAndUpdate(id, myproduct)
     .then((data) => {
