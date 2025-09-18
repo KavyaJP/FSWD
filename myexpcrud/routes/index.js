@@ -55,4 +55,45 @@ router.get("/display-product-api", async function (req, res, next) {
   }
 });
 
+router.get("/delete-product/:id", async function (req, res, next) {
+  var id = req.params.id;
+  ProductModel.findByIdAndDelete(id)
+    .then((data) => {
+      res.redirect("/display-product");
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+});
+
+router.get("/edit-product/:id", async function (req, res, next) {
+  var id = req.params.id;
+  var data = await ProductModel.findById(id)
+    .then((data) => {
+      console.log(data);
+      res.render("edit-product", { mydata: data });
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+});
+
+router.post("/update-product/:id", function (req, res, next) {
+  console.log("Entered Update Product");
+  var id = req.params.id;
+  var myproduct = {
+    pname: req.body.txt1,
+    pprice: req.body.txt2,
+    pdetails: req.body.txt3,
+  };
+  ProductModel.findByIdAndUpdate(id, myproduct)
+    .then((data) => {
+      console.log(myproduct);
+      res.redirect("/display-product");
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+});
+
 module.exports = router;
