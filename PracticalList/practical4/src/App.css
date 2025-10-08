@@ -1,0 +1,117 @@
+:root {
+  --bg-color: #f4f4f9;
+  --container-bg: #ffffff;
+  --text-color: #333;
+  --primary-color: #5b34da;
+  --secondary-color: #d1d1d1;
+  --danger-color: #e74c3c;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --border-radius: 8px;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background-color: var(--bg-color);
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.todo-app {
+  background-color: var(--container-bg);
+  width: 100%;
+  max-width: 500px;
+  padding: 30px;
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 15px var(--shadow-color);
+  text-align: center;
+}
+
+h1 {
+  color: var(--text-color);
+  margin-bottom: 25px;
+}
+
+.todo-form {
+  display: flex;
+  margin-bottom: 25px;
+}
+
+.todo-input {
+  flex-grow: 1;
+  padding: 12px 15px;
+  border: 2px solid var(--secondary-color);
+  border-radius: var(--border-radius) 0 0 var(--border-radius);
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.todo-input:focus {
+  border-color: var(--primary-color);
+}
+
+.todo-button {
+  padding: 12px 20px;
+  border: none;
+  background-color: var(--primary-color);
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 0 var(--border-radius) var(--border-radius) 0;
+  transition: background-color 0.3s;
+}
+
+.todo-button:hover {
+  background-color: #4a28b0;
+}
+
+.todo-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+
+.todo-item {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  background-color: var(--bg-color);
+  border-radius: var(--border-radius);
+  margin-bottom: 10px;
+  transition: background-color 0.3s;
+}
+
+.todo-item span {
+  flex-grow: 1;
+  cursor: pointer;
+  font-size: 16px;
+  transition: color 0.3s, text-decoration 0.3s;
+  color: var(--text-color);
+}
+
+.todo-item.completed span {
+  text-decoration: line-through;
+  color: #888;
+}
+
+.delete-button {
+  background-color: transparent;
+  border: none;
+  color: var(--danger-color);
+  font-size: 20px;
+  cursor: pointer;
+  margin-left: 15px;
+  transition: color 0.3s;
+  padding: 5px;
+  line-height: 1;
+}
+
+.delete-button:hover {
+  color: #c0392b;
+}
